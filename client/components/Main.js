@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import MessagesList from './MessagesList';
 import NewChannelEntryContainer from "./NewChannelEntry";
+import MessagesListContainer from "./MessagesList";
 
 import store, { fetchMessages, fetchChannels } from '../store';
 
@@ -24,7 +25,7 @@ export default class Main extends Component {
         <main>
           <Switch>
             <Route path="/new-channel" component={NewChannelEntryContainer} />
-            <Route path="/channels/:channelId" component={MessagesList} />
+            <Route path="/channels/:channelId" component={MessagesListContainer} />
             <Redirect to="/channels/1" />
           </Switch>
         </main>
